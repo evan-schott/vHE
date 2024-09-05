@@ -1,0 +1,24 @@
+[package]
+name = "vHE"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ark-bls12-381 = { version = "0.4.0" }
+ark-ec = { version = "0.4.2", features = ["parallel"] }
+ark-ff = { version = "0.4.2", features = ["parallel"] }
+ark-std = { version = "0.4.0", features = ["parallel"] }
+fhe = "0.1.0-beta.8"
+fhe-traits = "0.1.0-beta.8"
+itertools = "0.13.0"
+primal = "0.3.3"
+rand = "0.8.5"
+rayon = { version = "1.10.0", optional = true }  # Mark rayon as optional
+log = "0.4.22"
+primal-check = "0.3.4"
+
+[features]
+parallel = ["rayon"]
+
